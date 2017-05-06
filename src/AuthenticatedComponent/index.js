@@ -60,7 +60,7 @@ export function requireAuthentication(Component) {
 
             return (
                 <div>
-                    { this.isAuthenticated === true ? <Component {...this.props} /> : loginErrorMessage }
+                    { this.isAuthenticated() === true ? <Component {...this.props} /> : loginErrorMessage }
                 </div>
             );
         }
